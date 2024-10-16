@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+
+export async function getStaticPaths() {
+  const redirects = (await getCollection("redirects"))
+
+  return redirects.map((redirect) => ({
+    params: { slug: redirect.slug },
+    props: redirect,
+  }));
+}
+type Props = CollectionEntry<"redirects">;
+
+const redirect = Astro.props;
+const { Content } = await redirect.render();
+---
+
+<PageLayout title={redirect.data.title} description={redirect.data.title} redirect={redirect.data.redirect}>
+    <div class="text-center mt-10">
+        <p class="text-xl">Redirecting to {redirect.data.title}...</p>
+    </div>
+</PageLayout>
