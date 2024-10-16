@@ -6,6 +6,7 @@ import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import { dateRange } from "@lib/utils";
 import { SITE, HOME, SOCIALS } from "@consts";
+import EmojiScroller from "@components/EmojiScroller.astro";
 
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -30,16 +31,17 @@ const work = await Promise.all(
 
 ---
 
+
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
     <h4 class="animate font-semibold text-black dark:text-white text-4xl font-serif">
-      Hi, I'm Michael <span class="text-4xl">👋🏻</span> 
+      Hi, I'm Michael <EmojiScroller client:load transition:persist/>
     </h4>
     <div class="space-y-16">
       <section>
         <article class="space-y-4">
           <p class="animate">
-            I'm a lead software engineer at the University of Canterbury, working on <Link href="https://uconline.ac.nz" external>Tuihono UC | UC Online</Link>.
+            I'm a software engineer at the University of Canterbury, working on <Link href="https://uconline.ac.nz" external>Tuihono UC | UC Online</Link>.
             
             I specialize in full-stack development. While my primary expertise is in software engineering, I also have a strong interest in cloud infrastructure and DevOps. Based in Christchurch, New Zealand
             <br/><br/>
@@ -133,7 +135,7 @@ const work = await Promise.all(
             </li>
           ))}
           <li class="line-clamp-1">
-            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`}>
+            <Link href={`mailto:${SITE.EMAIL}`} aria-label={`Email ${SITE.NAME}`} confetti>
               {SITE.EMAIL}
             </Link>
           </li>

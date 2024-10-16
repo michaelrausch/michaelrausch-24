@@ -5,9 +5,10 @@ type Props = {
   href: string;
   external?: boolean;
   underline?: boolean;
+  confetti?: boolean;
 }
 
-const { href, external, underline = true, ...rest } = Astro.props;
+const { href, external, underline = true, confetti, ...rest } = Astro.props;
 ---
 
 <a 

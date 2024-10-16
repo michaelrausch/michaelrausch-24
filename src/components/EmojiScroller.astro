@@ -1,0 +1,20 @@
+<script>
+    const update_interval = 10 * 1000;
+    const emojis = ["👋", "🚀", "🛸"];
+    let idx = -1;
+
+    function update_emoji() {
+        const emoji_element = document.getElementById("emoji");
+        idx += 1;
+
+        if (idx == emojis.length) idx = 0;
+        if (emoji_element) emoji_element.innerHTML = emojis[idx];
+    }
+
+    setInterval(update_emoji, update_interval);
+    update_emoji();
+
+
+</script>
+
+<span class="text-4xl" id="emoji">👋</span>
