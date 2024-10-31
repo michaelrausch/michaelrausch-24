@@ -1,0 +1,57 @@
+---
+import Container from "@components/Container.astro";
+import PageLayout from "@layouts/PageLayout.astro";
+import { HOME } from "@consts";
+---
+
+<PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
+  <Container>
+    <h4 class="animate font-semibold text-black dark:text-white text-4xl font-serif">
+      Lab
+    </h4>
+    <div class="space-y-16">
+      <section>
+
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Jellyfin
+          </h5>
+          <a target="_blank" href="https://jellyfin.rausch.nz">https://jellyfin.rausch.nz</a>
+        </div>
+        <p class="text-sm">Jellyfin can only be accessed on the internal network or via Unifi Identity VPN</p>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Home Assistant
+          </h5>
+          <a target="_blank" href="https://home.rausch.nz">https://home.rausch.nz</a>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Gitea
+          </h5>
+          <a target="_blank" href="https://git.rausch.nz">https://git.rausch.nz</a>
+        </div>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Vaultwarden
+          </h5>
+          <a target="_blank" href="https://vault.rausch.nz">https://vault.rausch.nz</a>
+        </div>
+      </section>
+      
+     
+    </div>
+  </Container>
+</PageLayout>
