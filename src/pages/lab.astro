@@ -2,56 +2,22 @@
 import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import { HOME } from "@consts";
+import LinkCard from "@components/LinkCard.astro";
 ---
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white text-4xl font-serif">
+    <h4 class="animate font-semibold text-black dark:text-white text-4xl font-serif pb-10">
       Lab
     </h4>
-    <div class="space-y-16">
-      <section>
+    <div class="animate flex flex-col gap-4">
+      <LinkCard target="_blank" href="https://jellyfin.rausch.nz" heading="Jellyfin" subheading="Can only be accessed on the internal network or via Unifi Identity VPN"></LinkCard>
+      <LinkCard target="_blank" href="https://home.rausch.nz" heading="Home Assistant" subheading=""></LinkCard>
+      <LinkCard target="_blank" href="https://git.rausch.nz/michael" heading="Gitea" subheading=""></LinkCard>
+      <LinkCard target="_blank" href="https://vault.rausch.nz" heading="VaultWarden" subheading=""></LinkCard>
+      <LinkCard target="_blank" href="https://portainer.internal:9443" heading="Portainer" subheading="Internal Only"></LinkCard>
+      <LinkCard target="_blank" href="http://status.internal:3001" heading="Uptime-kuma" subheading="Internal Only"></LinkCard>
 
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Jellyfin
-          </h5>
-          <a target="_blank" href="https://jellyfin.rausch.nz">https://jellyfin.rausch.nz</a>
-        </div>
-        <p class="text-sm">Jellyfin can only be accessed on the internal network or via Unifi Identity VPN</p>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Home Assistant
-          </h5>
-          <a target="_blank" href="https://home.rausch.nz">https://home.rausch.nz</a>
-        </div>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Gitea
-          </h5>
-          <a target="_blank" href="https://git.rausch.nz">https://git.rausch.nz</a>
-        </div>
-      </section>
-
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Vaultwarden
-          </h5>
-          <a target="_blank" href="https://vault.rausch.nz">https://vault.rausch.nz</a>
-        </div>
-      </section>
-      
-     
     </div>
   </Container>
 </PageLayout>
