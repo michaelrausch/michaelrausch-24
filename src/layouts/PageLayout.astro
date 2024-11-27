@@ -19,7 +19,6 @@ const { title, description, redirect } = Astro.props;
     <Head title={`${title} | ${SITE.NAME}`} description={description} redirect={redirect}/>
   </head>
   <body>
-    <Header />
     <main>
       <slot />
     </main>
