@@ -1,7 +1,7 @@
 ---
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
-import { SITE } from "@consts";
+import { SITE, SOCIALS } from "@consts";
 ---
 
 <header>
@@ -31,9 +31,9 @@ import { SITE } from "@consts";
         <span>
           {`/`}
         </span>
-        <!-- <Link href="/lab">
-          lab
-        </Link> -->
+        <Link href={SOCIALS.find(social => social.NAME === "cv")?.HREF || ""} external={true}>
+         cv
+        </Link>
       </nav>
     </div>
   </Container>

@@ -36,5 +36,9 @@ export const SOCIALS: Socials = [
   { 
     NAME: "linkedin",
     HREF: "https://www.linkedin.com/in/michael-rausch-13445b8a/",
+  },
+  { 
+    NAME: "cv",
+    HREF: "https://standardresume.co/r/sQUNyo7W9NsmFFG8ZvU_B",
   }
 ];
