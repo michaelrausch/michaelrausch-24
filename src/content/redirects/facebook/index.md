@@ -1,4 +1,4 @@
 ---
-title: "Facebook"
-redirect: "https://www.facebook.com/michael.rausch123/"
+title: "CV"
+redirect: "https://standardresume.co/r/sQUNyo7W9NsmFFG8ZvU_B"
 ---
